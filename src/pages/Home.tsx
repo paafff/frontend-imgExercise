@@ -12,6 +12,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Layout from './Layout';
 import UpdateProduct from '@/components/UpdateProduct';
+import DeleteProduct from '@/components/DeleteProduct';
 
 type Product = {
   id: number;
@@ -91,8 +92,9 @@ const Home = () => {
               ))} */}
               </div>
             </CardContent>
-            <CardFooter>
+            <CardFooter className='justify-center space-x-5'>
               <UpdateProduct propsProduct={product} />
+              <DeleteProduct propsProduct={product} />
               {/* <Button className="w-full">
                 <p>lalaaa</p>
               </Button> */}

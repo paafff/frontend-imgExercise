@@ -19,7 +19,7 @@ type Product = {
   price: number;
 };
 
-const UpdateProduct = ({ propsProduct }: Product) => {
+const UpdateProduct = ({ propsProduct }: { propsProduct: Product }) => {
   const [name, setName] = useState(propsProduct.name);
   const [price, setPrice] = useState(propsProduct.price);
   const [imageOne, setImageOne] = useState(null);
